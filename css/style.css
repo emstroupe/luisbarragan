@@ -1,0 +1,64 @@
+/* ------------------------
+
+CSS TABLE OF CONTENTS
+
+# GLOBAL CSS
+    # TYPOGRAPHY
+        # BODY
+        # HEADINGS
+
+
+------------------------ */
+
+/* BODY */
+
+body {
+    font-family: "kings-caslon", sans-serif;
+    font-size: 100%;
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.85); 
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+
+}
+
+h1 {
+    font-family: "proxima-nova-extra-condensed", sans-serif;
+    font-weight: 200;
+    font-size: 8em;
+    text-transform: uppercase;
+    
+}
+
+h2 {
+    font-family: "kings caslon", sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+
+
+}
+
+h3 {
+    font-family: "proxima-nova-extra-condensed", sans-serif;
+    font-weight: 300;
+    font-size: 1.75em;
+    text-transform: uppercase;
+    /* transform: rotate(-90deg); */    
+}
+
+h4 {
+    font-family: "proxima-nova-extra-condensed", sans-serif;
+    font-weight: 200;
+    font-size: 1.25em;
+    text-transform: uppercase;
+}
+
+
+
+p {
+    font-family: "kings-caslon", sans-serif;
+    font-weight: 400;
+    font-size: .9em;
+}
