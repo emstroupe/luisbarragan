@@ -1,0 +1,35 @@
+// BOX SIZING
+* {box-sizing: border-box;}
+
+.container {
+    padding: 0 4%;
+    margin: 0 auto;
+}
+
+@media (min-height: $breakpoint-small) {
+    body {
+        font-size: 100%;
+    }
+}
+
+@media (min-height: $breakpoint-medium) {
+    .container {
+        max-width: $breakpoint-medium;
+    }
+}
+
+@media (min-height: $breakpoint-medium) {
+    body {
+        font-size: 112.5%;
+    }
+    .container {
+        max-width: $breakpoint-large;
+    }
+}
+
+// section {
+//     padding: 6em 0;
+//     min-height: 100vh;
+//     display: grid;
+//     place-items: center;
+// }

@@ -1,0 +1,9 @@
+
+@mixin sans-fontrules {
+    font-family: $sans-fontfamily;
+    text-transform: uppercase;
+}
+
+@mixin li-rules {
+    list-style: none;
+}

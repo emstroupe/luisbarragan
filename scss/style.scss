@@ -1,0 +1,37 @@
+/* ------------------------
+CSS TABLE OF CONTENTS
+# GLOBAL CSS
+    # MIXINS
+    # TYPOGRAPHY
+        # BODY
+        # HEADINGS
+    # LAYOUT
+        # BOX SIZING
+        # CONTAINER
+        # SECTION
+------------------------ */
+
+// VARIABLES
+$sans-fontfamily: "proxima-nova-extra-condensed", sans-serif;
+$serif-fontfamily: "kings-caslon", sans-serif;
+// $body-maxwidth: 29em;
+
+//COLORS 
+$color-text-body: rgba(0,0,0,.7);
+$color-midgrey: rgba(0,0,0,.5);
+
+// BREAKPOINTS
+$breakpoint-small: 768px;
+$breakpoint-medium: 1050px;
+$breakpoint-large: 1250px;
+
+// IMPORT PARTIALS
+@import 'partials/mixins';
+@import 'partials/typography';
+@import 'partials/layout';
+
+
+
+
+
+

@@ -1,64 +1,92 @@
 /* ------------------------
-
 CSS TABLE OF CONTENTS
-
 # GLOBAL CSS
+    # MIXINS
     # TYPOGRAPHY
         # BODY
         # HEADINGS
-
-
+    # LAYOUT
+        # BOX SIZING
+        # CONTAINER
+        # SECTION
 ------------------------ */
-
 /* BODY */
-
 body {
-    font-family: "kings-caslon", sans-serif;
-    font-size: 100%;
-    line-height: 1.4;
-    color: rgba(0, 0, 0, 0.85); 
-}
+  font-family: "kings-caslon", sans-serif;
+  font-size: 100%;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.85); }
 
 /* HEADINGS */
-h1, h2, h3 {
-
-}
-
 h1 {
-    font-family: "proxima-nova-extra-condensed", sans-serif;
-    font-weight: 200;
-    font-size: 8em;
-    text-transform: uppercase;
-    
-}
+  font-family: "proxima-nova-extra-condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 8em; }
 
 h2 {
-    font-family: "kings caslon", sans-serif;
-    font-weight: 400;
-    font-size: 2em;
-
-
-}
+  font-family: "kings-caslon", sans-serif;
+  font-weight: 400;
+  font-size: 2em; }
 
 h3 {
-    font-family: "proxima-nova-extra-condensed", sans-serif;
-    font-weight: 300;
-    font-size: 1.75em;
-    text-transform: uppercase;
-    /* transform: rotate(-90deg); */    
-}
+  font-family: "proxima-nova-extra-condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.75em;
+  /* transform: rotate(-90deg); */ }
 
 h4 {
-    font-family: "proxima-nova-extra-condensed", sans-serif;
-    font-weight: 200;
-    font-size: 1.25em;
-    text-transform: uppercase;
-}
+  font-family: "proxima-nova-extra-condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1.25em; }
 
+h5 {
+  font-family: "kings-caslon", sans-serif;
+  color: rgba(0, 0, 0, 0.5); }
 
+h6 {
+  font-family: "proxima-nova-extra-condensed", sans-serif;
+  font-size: 1em; }
 
 p {
-    font-family: "kings-caslon", sans-serif;
-    font-weight: 400;
-    font-size: .9em;
-}
+  font-family: "kings-caslon", sans-serif;
+  font-weight: 400;
+  font-size: .9em;
+  max-width: 29em; }
+
+.site-nav li {
+  font-family: "proxima-nova-extra-condensed", sans-serif;
+  text-transform: uppercase;
+  list-style: none;
+  font-weight: 300;
+  font-size: 1.2em;
+  list-style: none; }
+
+li {
+  list-style: none;
+  font-family: "proxima-nova-extra-condensed", sans-serif;
+  font-weight: 200; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  padding: 0 4%;
+  margin: 0 auto; }
+
+@media (min-height: 768px) {
+  body {
+    font-size: 100%; } }
+
+@media (min-height: 1050px) {
+  .container {
+    max-width: 1050px; } }
+
+@media (min-height: 1050px) {
+  body {
+    font-size: 112.5%; }
+  .container {
+    max-width: 1250px; } }
