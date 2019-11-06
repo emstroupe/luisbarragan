@@ -9,6 +9,10 @@ CSS TABLE OF CONTENTS
         # BOX SIZING
         # CONTAINER
         # SECTION
+    # STRUCTURE
+        # SECTION
+        # HERO SECTIONS
+        # LAYOUT SECTIONS
 ------------------------ */
 /* BODY */
 body {
@@ -69,24 +73,68 @@ li {
   font-family: "proxima-nova-extra-condensed", sans-serif;
   font-weight: 200; }
 
+a {
+  text-decoration: none; }
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .container {
-  padding: 0 4%;
+  background: rgba(255, 0, 0, 0.2);
+  padding: 0 5em;
   margin: 0 auto; }
 
-@media (min-height: 768px) {
+@media (min-width: 768px) {
   body {
     font-size: 100%; } }
 
-@media (min-height: 1050px) {
+@media (min-width: 1050px) {
   .container {
     max-width: 1050px; } }
 
-@media (min-height: 1050px) {
+@media (min-width: 1050px) {
   body {
     font-size: 112.5%; }
   .container {
     max-width: 1250px; } }
+
+/* SECTIONS */
+section {
+  padding: 3em 0; }
+  @media (min-width: 768px) {
+    section.sticky-section {
+      padding: 0; }
+      section.sticky-section .container {
+        padding: 10vh 0 0 0; }
+      section.sticky-section h2 {
+        text-align: right;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        width: 4em;
+        margin-left: -5em; }
+      section.sticky-section .block {
+        padding: 0 0 10vh 0; } }
+
+/* HERO SECTIONS */
+/* LAYOUT SECTION */
+.split-crossed {
+  background: blue; }
+  @media (min-width: 768px) {
+    .split-crossed .block {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .split-crossed .image-block {
+      width: 50%; }
+    .split-crossed .text-block {
+      width: 50%; }
+      .split-crossed .text-block h2 {
+        -webkit-transform: translateX(2.5em);
+        -ms-transform: translateX(2.5em);
+        transform: translateX(2.5em); } }

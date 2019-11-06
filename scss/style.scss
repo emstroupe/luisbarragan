@@ -9,6 +9,10 @@ CSS TABLE OF CONTENTS
         # BOX SIZING
         # CONTAINER
         # SECTION
+    # STRUCTURE
+        # SECTION
+        # HERO SECTIONS
+        # LAYOUT SECTIONS
 ------------------------ */
 
 // VARIABLES
@@ -29,6 +33,10 @@ $breakpoint-large: 1250px;
 @import 'partials/mixins';
 @import 'partials/typography';
 @import 'partials/layout';
+@import 'partials/structure';
+
+
+
 
 
 

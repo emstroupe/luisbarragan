@@ -2,23 +2,24 @@
 * {box-sizing: border-box;}
 
 .container {
-    padding: 0 4%;
+    background: rgba(255,0,0,.2);
+    padding: 0 5em;
     margin: 0 auto;
 }
 
-@media (min-height: $breakpoint-small) {
+@media (min-width: $breakpoint-small) {
     body {
         font-size: 100%;
     }
 }
 
-@media (min-height: $breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
     .container {
         max-width: $breakpoint-medium;
     }
 }
 
-@media (min-height: $breakpoint-medium) {
+@media (min-width: $breakpoint-medium) {
     body {
         font-size: 112.5%;
     }
