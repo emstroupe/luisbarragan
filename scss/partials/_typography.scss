@@ -17,16 +17,16 @@ h1 {
 }
 
 h2 {
-    font-family: $serif-fontfamily;
-    font-weight: 400;
-    font-size: 2em;
-}
-
-h3 {
     @include sans-fontrules;
     font-weight: 300;
     font-size: 1.75em;
     /* transform: rotate(-90deg); */    
+}
+
+h3 {
+    font-family: $serif-fontfamily;
+    font-weight: 400;
+    font-size: 2em;
 }
 
 h4 {
