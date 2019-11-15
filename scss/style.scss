@@ -5,6 +5,8 @@ CSS TABLE OF CONTENTS
     # TYPOGRAPHY
         # BODY
         # HEADINGS
+    # MEDIA
+        # IMG    
     # LAYOUT
         # BOX SIZING
         # CONTAINER
@@ -13,6 +15,8 @@ CSS TABLE OF CONTENTS
         # SECTION
         # HERO SECTIONS
         # LAYOUT SECTIONS
+        # SITE HEADER
+        # SITE NAV
 ------------------------ */
 
 // VARIABLES
@@ -32,8 +36,10 @@ $breakpoint-large: 1250px;
 // IMPORT PARTIALS
 @import 'partials/mixins';
 @import 'partials/typography';
+@import 'partials/media';
 @import 'partials/layout';
 @import 'partials/structure';
+
 
 
 

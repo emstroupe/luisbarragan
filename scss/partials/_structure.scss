@@ -4,7 +4,7 @@ section {
     min-height: 100vh;
     place-items: center; 
     display: grid;
-    background: rgba(0,255,0,.5);  
+    // background: rgba(0,255,0,.5);  
 }
 
 /* STICKY SECTIONS ONLY */
@@ -37,7 +37,7 @@ section {
 
 /* LAYOUT SECTION */
 .split-crossed {
-    background: rgba(0,0,255,.5);
+    // background: rgba(0,0,255,.5);
     @media (min-width: $breakpoint-small) {
         .block {
             display: flex;
@@ -56,18 +56,90 @@ section {
         }
     }
 }
+.site-header {
+    background-image: url(/img/cuadra.home.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    min-width: 100%;
+    height: auto;
+
+    h1 {
+        font-size: 20vh;
+        text-align: center;
+        padding-top: 25%;
+        margin: 0;
+        color: rgb(226, 226, 105,);
+        
+    }
+}
+
+/* SITE NAVIGATION */ 
+.site-header .site-nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    ul {
+        position: fixed;
+        top: 10vh;
+        right: 10vh; 
+    }
+    li {
+        opacity: 0;
+    }
+    a {
+        display: block;
+        padding: .5em;
+        width: 3em;
+        // border: 1px solid red;
+    }
+
+    &.active {
+        position: fixed;
+        z-index: 100;
+        ul {
+            top: 10%;
+        }
+        li {
+            opacity: 1;
+        }
+    }
+}
+
+/* MENU BUTTON */
+.menu-button {
+    position: absolute;
+    top: 10vh;
+    right: 10vh;
+    width: 2em;
+    height: 2em;
+    // background: red;
+    overflow: hidden;
+    
+    &:before {
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        content: "\2630";
+        color: rgb(226, 226, 105,);
+        transform: rotate(90deg);
+    }
+}
+
+.active .menu-button.navicon:before {
+    content: "\2630";
+    color: rgb(226, 226, 105,);
+    transform: rotateX(0deg);
+}
 
 
 /* HERO SECTIONS */
-.hero {
-    h1 {
-        // font-size: 8vh;
-        // margin: 0;
-    }
-  
-}
-.hero-wrapper {
-    display: flex;
-    margin: 0;
-    display: flex;
-}
+
+// .hero-wrapper {
+//     display: flex;
+//     margin: 0;
+//     display: flex;
+// }

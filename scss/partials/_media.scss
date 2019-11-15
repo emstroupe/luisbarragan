@@ -1,0 +1,44 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.clip-path {
+    .container {
+        position: relative;
+        padding: 0;
+    }
+    img {
+        opacity: 0;
+    }
+    a {
+        display: block;
+    }
+    .rust {
+        background-image: url(/img/rust.jpg);
+        background-size: 120%;
+        background-position: right top;
+        clip-path: polygon(0 0%, 100% 0%, 0 50%);
+    }
+    .yellow {
+        background-image: url(/img/yellow.jpg);
+        background-size: 120%;
+        position: absolute;
+        top: 2%;
+        clip-path: polygon(0% 38%, 100% 0, 100% 60%);
+    }
+    .blue {
+        background-image: url(/img/blue.jpg);
+        background-size: 120%;
+        position: absolute;
+        top: 32%;
+        clip-path: polygon(0 100%, 100% 33%, 0 0);
+    }
+    .bluewater {
+        background-image: url(/img/bluewater.jpg);
+        background-size: 100%;
+        position: absolute;
+        top: 50%; 
+        clip-path: polygon(0% 52%, 100% 0, 100% 80%);
+    }
+}

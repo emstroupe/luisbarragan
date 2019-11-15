@@ -5,6 +5,8 @@ CSS TABLE OF CONTENTS
     # TYPOGRAPHY
         # BODY
         # HEADINGS
+    # MEDIA
+        # IMG    
     # LAYOUT
         # BOX SIZING
         # CONTAINER
@@ -13,6 +15,8 @@ CSS TABLE OF CONTENTS
         # SECTION
         # HERO SECTIONS
         # LAYOUT SECTIONS
+        # SITE HEADER
+        # SITE NAV
 ------------------------ */
 /* BODY */
 body {
@@ -76,6 +80,51 @@ li {
 a {
   text-decoration: none; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
+.clip-path .container {
+  position: relative;
+  padding: 0; }
+
+.clip-path img {
+  opacity: 0; }
+
+.clip-path a {
+  display: block; }
+
+.clip-path .rust {
+  background-image: url(/img/rust.jpg);
+  background-size: 120%;
+  background-position: right top;
+  -webkit-clip-path: polygon(0 0%, 100% 0%, 0 50%);
+  clip-path: polygon(0 0%, 100% 0%, 0 50%); }
+
+.clip-path .yellow {
+  background-image: url(/img/yellow.jpg);
+  background-size: 120%;
+  position: absolute;
+  top: 2%;
+  -webkit-clip-path: polygon(0% 38%, 100% 0, 100% 60%);
+  clip-path: polygon(0% 38%, 100% 0, 100% 60%); }
+
+.clip-path .blue {
+  background-image: url(/img/blue.jpg);
+  background-size: 120%;
+  position: absolute;
+  top: 32%;
+  -webkit-clip-path: polygon(0 100%, 100% 33%, 0 0);
+  clip-path: polygon(0 100%, 100% 33%, 0 0); }
+
+.clip-path .bluewater {
+  background-image: url(/img/bluewater.jpg);
+  background-size: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-clip-path: polygon(0% 52%, 100% 0, 100% 80%);
+  clip-path: polygon(0% 52%, 100% 0, 100% 80%); }
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -83,7 +132,8 @@ a {
 .container {
   background: rgba(255, 0, 0, 0.2);
   padding: 0 4%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 1000px; }
 
 @media (min-width: 768px) {
   body {
@@ -105,8 +155,7 @@ section {
   min-height: 100vh;
   place-items: center;
   display: -ms-grid;
-  display: grid;
-  background: rgba(0, 255, 0, 0.5); }
+  display: grid; }
 
 /* STICKY SECTIONS ONLY */
 @media (min-width: 768px) {
@@ -129,29 +178,86 @@ section {
       padding: 0 0 10vh 0; } }
 
 /* LAYOUT SECTION */
-.split-crossed {
-  background: rgba(0, 0, 255, 0.5); }
-  @media (min-width: 768px) {
-    .split-crossed .block {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; }
-    .split-crossed .image-block {
-      width: 50%; }
-    .split-crossed .text-block {
-      width: 50%; }
-      .split-crossed .text-block h2 {
-        -webkit-transform: translateX(2.5em);
-        -ms-transform: translateX(2.5em);
-        transform: translateX(2.5em); } }
+@media (min-width: 768px) {
+  .split-crossed .block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .split-crossed .image-block {
+    width: 50%; }
+  .split-crossed .text-block {
+    width: 50%; }
+    .split-crossed .text-block h2 {
+      -webkit-transform: translateX(2.5em);
+      -ms-transform: translateX(2.5em);
+      transform: translateX(2.5em); } }
+
+.site-header {
+  background-image: url(/img/cuadra.home.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  min-width: 100%;
+  height: auto; }
+  .site-header h1 {
+    font-size: 20vh;
+    text-align: center;
+    padding-top: 25%;
+    margin: 0;
+    color: #e2e269; }
+
+/* SITE NAVIGATION */
+.site-header .site-nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center; }
+  .site-header .site-nav ul {
+    position: fixed;
+    top: 10vh;
+    right: 10vh; }
+  .site-header .site-nav li {
+    opacity: 0; }
+  .site-header .site-nav a {
+    display: block;
+    padding: .5em;
+    width: 3em; }
+  .site-header .site-nav.active {
+    position: fixed;
+    z-index: 100; }
+    .site-header .site-nav.active ul {
+      top: 10%; }
+    .site-header .site-nav.active li {
+      opacity: 1; }
+
+/* MENU BUTTON */
+.menu-button {
+  position: absolute;
+  top: 10vh;
+  right: 10vh;
+  width: 2em;
+  height: 2em;
+  overflow: hidden; }
+  .menu-button:before {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    content: "\2630";
+    color: #e2e269;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+.active .menu-button.navicon:before {
+  content: "\2630";
+  color: #e2e269;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg); }
 
 /* HERO SECTIONS */
-.hero-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  display: flex; }
