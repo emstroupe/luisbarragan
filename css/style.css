@@ -108,14 +108,14 @@ img {
   display: block; }
 
 .clip-path .rust {
-  background-image: url(/img/rust.jpg);
+  background-image: url(../img/rust.jpg);
   background-size: 120%;
   background-position: right top;
   -webkit-clip-path: polygon(0 0%, 100% 0%, 0 50%);
   clip-path: polygon(0 0%, 100% 0%, 0 50%); }
 
 .clip-path .yellow {
-  background-image: url(/img/yellow.jpg);
+  background-image: url(../img/yellow.jpg);
   background-size: 120%;
   position: absolute;
   top: 2%;
@@ -123,7 +123,7 @@ img {
   clip-path: polygon(0% 38%, 100% 0, 100% 60%); }
 
 .clip-path .blue {
-  background-image: url(/img/blue.jpg);
+  background-image: url(../img/blue.jpg);
   background-size: 120%;
   position: absolute;
   top: 35%;
@@ -131,7 +131,7 @@ img {
   clip-path: polygon(0 100%, 100% 33%, 0 0); }
 
 .clip-path .bluewater {
-  background-image: url(/img/bluewater.jpg);
+  background-image: url(../img/bluewater.jpg);
   background-size: 100%;
   position: absolute;
   top: 55%;
