@@ -2,6 +2,8 @@
 CSS TABLE OF CONTENTS
 # GLOBAL CSS
     # MIXINS
+    # SUBPAGE
+        # HEADINGS
     # TYPOGRAPHY
         # BODY
         # HEADINGS
@@ -30,6 +32,7 @@ $serif-fontfamily: "kings-caslon", sans-serif;
 //COLORS 
 $color-text-body: rgba(0,0,0,.7);
 $color-midgrey: rgba(0,0,0,.5);
+$color-accent: rgba(192, 36, 153, 0.5);
 
 // BREAKPOINTS
 $breakpoint-small: 768px;
@@ -43,6 +46,8 @@ $breakpoint-large: 1250px;
 @import 'partials/layout';
 @import 'partials/grid';
 @import 'partials/structure';
+@import 'partials/subpage';
+
 
 
 

@@ -2,6 +2,8 @@
 CSS TABLE OF CONTENTS
 # GLOBAL CSS
     # MIXINS
+    # SUBPAGE
+        # HEADINGS
     # TYPOGRAPHY
         # BODY
         # HEADINGS
@@ -78,10 +80,18 @@ p {
 li {
   list-style: none;
   font-family: "proxima-nova-extra-condensed", sans-serif;
-  font-weight: 200; }
+  font-weight: 200;
+  list-style: none; }
 
 a {
   text-decoration: none; }
+
+hr {
+  display: block;
+  width: 80%;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgba(192, 36, 153, 0.5); }
 
 img {
   max-width: 100%;
@@ -207,9 +217,6 @@ section {
   min-height: 0;
   padding: 0; }
 
-.work .clip-path .container {
-  background: red; }
-
 /* HERO SECTIONS */
 .hero {
   min-height: 0;
@@ -247,7 +254,15 @@ section {
       width: 50%;
       -webkit-transform: translateX(2.5em);
       -ms-transform: translateX(2.5em);
-      transform: translateX(2.5em); } }
+      transform: translateX(2.5em); }
+    .sticky-section ul {
+      display: inline-block; }
+    .sticky-section li {
+      display: inline-block;
+      padding: .5em 1.5em; }
+    .sticky-section .timeline-event {
+      -ms-flex-line-pack: center;
+      align-content: center; } }
 
 .sticky-section .clip-path .container {
   padding-bottom: 20em; }
@@ -336,5 +351,102 @@ section {
 .active .menu-button.navicon:before {
   content: "\2630";
   color: #e2e269;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg); }
+
+.site-footer .site-nav a {
+  display: block;
+  padding: .5em 0 .75em 0; }
+
+.site-footer .site-nav h5 {
+  -webkit-transform: rotate(90deg) translate(70%, 0%);
+  -ms-transform: rotate(90deg) translate(70%, 0%);
+  transform: rotate(90deg) translate(70%, 0%);
+  -webkit-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
+  transform-origin: bottom right; }
+
+.sub-footer .nav {
+  text-align: center; }
+
+.sub-footer ul {
+  display: inline-block; }
+
+.sub-footer li {
+  display: inline-block;
+  padding: .5em 1.5em; }
+
+/* HEADING */
+.sub-page .site-header {
+  min-height: 5em; }
+
+.sub-page h1 {
+  font-family: "kings-caslon", sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; }
+
+.sub-page h2 {
+  margin: 0; }
+
+.sub-page .site-header .site-nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid; }
+  .sub-page .site-header .site-nav ul {
+    position: fixed;
+    top: 15%;
+    right: 10%;
+    -webkit-transform: translate(-15%, -10%);
+    -ms-transform: translate(-15%, -10%);
+    transform: translate(-15%, -10%);
+    margin: 0;
+    padding: 0; }
+  .sub-page .site-header .site-nav li {
+    opacity: 0;
+    text-align: right; }
+  .sub-page .site-header .site-nav a {
+    display: block;
+    padding: .5em 0 .75em 0; }
+  .sub-page .site-header .site-nav.active {
+    position: fixed;
+    z-index: 100; }
+    .sub-page .site-header .site-nav.active ul {
+      top: 15%; }
+    .sub-page .site-header .site-nav.active li {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1; }
+
+.sub-page .menu-button {
+  position: fixed;
+  top: 2.5em;
+  right: 2.5em;
+  width: 1.5em;
+  height: 1.5em;
+  overflow: hidden;
+  z-index: 200; }
+  .sub-page .menu-button:before {
+    display: inline-block;
+    font-size: 1.2em;
+    width: 1.5em;
+    height: 1.5em;
+    content: "\2630";
+    color: rgba(192, 36, 153, 0.5);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+.sub-page .active .menu-button.navicon:before {
+  content: "\2630";
+  color: rgba(192, 36, 153, 0.5);
   -webkit-transform: rotateX(0deg);
   transform: rotateX(0deg); }

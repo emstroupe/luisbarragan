@@ -66,9 +66,18 @@ li {
     @include li-rules;
     font-family: $sans-fontfamily;
     font-weight: 200;
+    list-style: none;
 }
 
 a {
     // color: red;
     text-decoration: none;
+}
+
+hr {
+    display: block;
+    width: 80%;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $color-accent;
 }
