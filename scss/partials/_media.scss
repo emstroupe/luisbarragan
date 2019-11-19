@@ -31,14 +31,18 @@ img {
         background-image: url(/img/blue.jpg);
         background-size: 120%;
         position: absolute;
-        top: 32%;
+         // top: 52%; // 
+        // top: -52%; // added container
+        top: 35%;
         clip-path: polygon(0 100%, 100% 33%, 0 0);
     }
     .bluewater {
         background-image: url(/img/bluewater.jpg);
         background-size: 100%;
         position: absolute;
-        top: 50%; 
-        clip-path: polygon(0% 52%, 100% 0, 100% 80%);
+        // top: 81%;
+        // top: -19%; // added container
+        top: 55%;         
+        clip-path: polygon(0% 51%, 100% 0, 100% 51%);
     }
 }

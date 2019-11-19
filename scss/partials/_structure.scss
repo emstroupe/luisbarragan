@@ -7,16 +7,42 @@ section {
     // background: rgba(0,255,0,.5);  
 }
 
+.home {
+    min-height: 0;
+    padding: 0;
+}
+
+.work .clip-path .container{
+   background: red;
+}
+/* HERO SECTIONS */
+
+// .hero-wrapper {
+//     padding: 0;
+//     margin: 0;
+// }
+
+.hero {
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
 /* STICKY SECTIONS ONLY */
 .sticky-section {
+
     @media(min-width: $breakpoint-small) {
         padding: 0;
         display: block;
         min-height: 0;
+
         .container {
+            display: flex;
+            align-items: center;
             padding: 0 0 0 0;
             min-height: 100vh;
         }
+
         h2 {
         // text-align: right;
         position: sticky;
@@ -29,8 +55,24 @@ section {
         // transform: translateX(-50%);
         // border: 1px solid yellow;
         }
+
         .block {
             padding: 0 0 10vh 0;
+        }
+
+        .image-block {
+            width: 50%;
+        }
+
+        .text-block {
+            width: 50%;
+            transform: translateX(2.5em);
+        }
+    }
+    .clip-path {
+        .container {
+            // background: orange;
+            padding-bottom: 20em;
         }
     }
 }
@@ -57,21 +99,15 @@ section {
     }
 }
 .site-header {
-    background-image: url(/img/cuadra.home.jpg);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    min-width: 100%;
-    height: auto;
-
     h1 {
-        font-size: 20vh;
-        text-align: center;
-        padding-top: 25%;
-        margin: 0;
+        font-size: 10vw;
         color: rgb(226, 226, 105,);
-        
-    }
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        padding-top: 20%;
+        padding-bottom: 0;
+        }
 }
 
 /* SITE NAVIGATION */ 
@@ -81,29 +117,32 @@ section {
     top: 0;
     left: 0;
     display: grid;
-    place-items: center;
     ul {
         position: fixed;
-        top: 10vh;
-        right: 10vh; 
+        top: 15%;
+        right: 10%; 
+        transform: translate(-15%, -10%);
+        margin: 0;
+        padding: 0;
     }
     li {
         opacity: 0;
+        text-align: right;
     }
     a {
         display: block;
-        padding: .5em;
-        width: 3em;
-        // border: 1px solid red;
+        padding: .5em 0 .75em 0;
     }
 
     &.active {
         position: fixed;
+        // height: 100%;
         z-index: 100;
         ul {
-            top: 10%;
+            top: 15%;
         }
         li {
+            transform: translateY(0);
             opacity: 1;
         }
     }
@@ -111,35 +150,32 @@ section {
 
 /* MENU BUTTON */
 .menu-button {
-    position: absolute;
-    top: 10vh;
-    right: 10vh;
-    width: 2em;
-    height: 2em;
-    // background: red;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 1.5em;
+    height: 1.5em;
     overflow: hidden;
-    
+    z-index: 200;
+
     &:before {
         display: inline-block;
-        width: 2em;
-        height: 2em;
+        font-size: 1.2em;
+        width: 1.5em;
+        height: 1.5em;
         content: "\2630";
         color: rgb(226, 226, 105,);
         transform: rotate(90deg);
     }
 }
 
+
+
 .active .menu-button.navicon:before {
     content: "\2630";
     color: rgb(226, 226, 105,);
     transform: rotateX(0deg);
+    // transition: .4s all ease-out;
 }
 
 
-/* HERO SECTIONS */
-
-// .hero-wrapper {
-//     display: flex;
-//     margin: 0;
-//     display: flex;
-// }

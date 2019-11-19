@@ -11,12 +11,15 @@ CSS TABLE OF CONTENTS
         # BOX SIZING
         # CONTAINER
         # SECTION
+    # GRID
+        #   
     # STRUCTURE
         # SECTION
         # HERO SECTIONS
         # LAYOUT SECTIONS
         # SITE HEADER
         # SITE NAV
+
 ------------------------ */
 
 // VARIABLES
@@ -38,6 +41,7 @@ $breakpoint-large: 1250px;
 @import 'partials/typography';
 @import 'partials/media';
 @import 'partials/layout';
+@import 'partials/grid';
 @import 'partials/structure';
 
 
