@@ -118,17 +118,17 @@ img {
   background-image: url(../img/yellow.jpg);
   background-size: 120%;
   position: absolute;
-  top: 2%;
-  -webkit-clip-path: polygon(0% 38%, 100% 0, 100% 60%);
-  clip-path: polygon(0% 38%, 100% 0, 100% 60%); }
+  top: 1vw;
+  -webkit-clip-path: polygon(30% 26.75%, 100% 0, 100% 60%);
+  clip-path: polygon(30% 26.75%, 100% 0, 100% 60%); }
 
 .clip-path .blue {
   background-image: url(../img/blue.jpg);
   background-size: 120%;
   position: absolute;
-  top: 35%;
-  -webkit-clip-path: polygon(0 100%, 100% 33%, 0 0);
-  clip-path: polygon(0 100%, 100% 33%, 0 0); }
+  top: 27.45vw;
+  -webkit-clip-path: polygon(29% 0.5%, 85% 40.5%, 0 100%, 0 17%);
+  clip-path: polygon(29% 0.5%, 85% 40.5%, 0 100%, 0 17%); }
 
 .clip-path .bluewater {
   background-image: url(../img/bluewater.jpg);

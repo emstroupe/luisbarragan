@@ -24,8 +24,8 @@ img {
         background-image: url(../img/yellow.jpg);
         background-size: 120%;
         position: absolute;
-        top: 2%;
-        clip-path: polygon(0% 38%, 100% 0, 100% 60%);
+        top: 1vw;
+        clip-path: polygon(30% 26.75%, 100% 0, 100% 60%);
     }
     .blue {
         background-image: url(../img/blue.jpg);
@@ -33,8 +33,8 @@ img {
         position: absolute;
          // top: 52%; // 
         // top: -52%; // added container
-        top: 35%;
-        clip-path: polygon(0 100%, 100% 33%, 0 0);
+        top: 27.45vw;
+        clip-path: polygon(29% .5%, 85% 40.5%, 0 100%, 0 17%);
     }
     .bluewater {
         background-image: url(../img/bluewater.jpg);
