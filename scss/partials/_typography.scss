@@ -19,8 +19,7 @@ h1 {
 h2 {
     @include sans-fontrules;
     font-weight: 300;
-    font-size: 1.75em;
-    /* transform: rotate(-90deg); */    
+    font-size: 1.75em;   
 }
 
 h3 {
@@ -44,9 +43,8 @@ h5 {
 h6 {
     font-family: $sans-fontfamily;
     font-size: 1em;
-
-
 }
+
 p {
     font-family: $serif-fontfamily;
     font-weight: 400;
@@ -59,7 +57,7 @@ p {
     @include li-rules;
     font-weight: 300;
     font-size: 1.2em;
-    list-style: none;
+    color: $color-midgrey;
 }
 
 li {

@@ -25,6 +25,7 @@ section {
     padding: 0;
 }
 
+
 /* STICKY SECTIONS ONLY */
 .sticky-section {
 
@@ -41,7 +42,7 @@ section {
         }
 
         h2 {
-        // text-align: right;
+        text-align: right;
         position: sticky;
         top: 0; //need for setting position
         z-index: 100; 
@@ -49,12 +50,11 @@ section {
         margin: 0 0 0 5%;
         padding: 2em 0 0 0;
         // right: -100%;
-        // transform: translateX(-50%);
-        // border: 1px solid yellow;
+        // transform: rotate(-90deg);
         }
 
         .block {
-            padding: 0 0 10vh 0;
+            padding: 0 6.5em;   
         }
 
         .image-block {
@@ -78,11 +78,10 @@ section {
         .timeline-event {
             align-content: center;
         }
-
     }
+
     .clip-path {
         .container {
-            // background: orange;
             padding-bottom: 20em;
         }
     }
@@ -223,4 +222,10 @@ section {
         display: inline-block;
         padding: .5em 1.5em ;
     }   
+}
+
+.timeline-event li {
+  display: block;
+
+    
 }
