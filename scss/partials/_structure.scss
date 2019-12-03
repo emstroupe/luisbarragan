@@ -50,7 +50,7 @@ section {
         margin: 0 0 0 5%;
         padding: 2em 0 0 0;
         // right: -100%;
-        // transform: rotate(-90deg);
+        transform: rotate(-90deg);
         }
 
         .block {
@@ -66,26 +66,50 @@ section {
             transform: translateX(2.5em);
         }
 
-        ul {
-        display: inline-block;
+        .container-timeline {
+            border: 4px solid magenta;
+
+            .timelinedate {
+                ul {
+                    display: inline-block;
+                }
+                li {
+                    display: inline-block;
+                    padding: .5em 1.5em ;
+                    background: yellow;
+                }       
+            }
+    
+            .timelineevent {
+                ul {
+                    border: 1px solid red;
+                    // display: flex;
+                    position: relative;
+                }
+                li {
+                    position: absolute;
+                    background: purple;
+                    top: 200px;
+                    left: 30%;
+                    opacity: 0;
+
+                    &:before {
+                        opacity: 0;
+                    }
+                }
+
+            }
         }
 
-        li {
-        display: inline-block;
-        padding: .5em 1.5em ;
-        }   
-
-        .timeline-event {
-            align-content: center;
-        }
+      
     }
-
     .clip-path {
         .container {
             padding-bottom: 20em;
         }
     }
 }
+
 
 /* LAYOUT SECTION */
 .split-crossed {
@@ -106,18 +130,6 @@ section {
                 transform: translateX(2.5em);
             }
         }
-
-        // ul {
-        //     display: flex;
-        //     flex-direction: column;
-        //     transform: rotate(-60deg);
-        //     height: 100%;
-        // }
-        // li {
-        //         list-style: none;
-        //         transform: rotate(60deg);
-        //         padding: 20px;
-        //       }
         }
 }
 
@@ -133,6 +145,10 @@ section {
         }
 }
 
+
+// .timeline-event li {
+//   display: block;
+// }
 
 /* SITE NAVIGATION */ 
 .site-header .site-nav {
@@ -224,8 +240,3 @@ section {
     }   
 }
 
-.timeline-event li {
-  display: block;
-
-    
-}
