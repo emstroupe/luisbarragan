@@ -65,11 +65,13 @@ li {
     font-family: $sans-fontfamily;
     font-weight: 200;
     list-style: none;
+    color: $color-midgrey;
 }
 
 a {
     // color: red;
     text-decoration: none;
+    color: $color-midgrey;
 }
 
 hr {
