@@ -42,7 +42,7 @@ section {
         top: 0; //need for setting position
         z-index: 100; 
         width: 3em;
-        margin: 0 0 0 5%;
+        margin: 0 0 0 -2%;
         padding: 2em 0 0 0;
         right: -100%;
         transform: rotate(-90deg);
@@ -102,7 +102,7 @@ section {
 .site-header {
     h1 {
         font-size: 10vw;
-        color: rgb(226, 226, 105,);
+        color: $color-accent2;
         position: absolute;
         width: 100%;
         text-align: center;
@@ -149,7 +149,7 @@ section {
 .site-header {
     h1 {
         font-size: 10vw;
-        color: rgb(226, 226, 105,);
+        color: $color-accent2;
         position: absolute;
         width: 100%;
         text-align: center;
@@ -161,7 +161,7 @@ section {
 @media (max-width: $breakpoint-small) {
     .timeline-date {
         ul {
-            background: rgba(0,0,255,.5);
+            // background: rgba(0,0,255,.5);
             display: flex;
             justify-content: center;
             // padding: 0;
@@ -170,20 +170,23 @@ section {
             padding-right: 0;
             margin: 0;
             margin-top: 7em;
-            border-bottom: 1px solid pink;
+            border-bottom: 1px solid $color-accent;
             width: 100%;
             text-align: center;
+            transform: rotate(10deg);
+            transform-origin: bottom center;
         } 
         li {
             // display: inline-block;
             justify-content: center;
             padding: 1em 1.7em;
+            transform: rotate(-10deg);
         }  
     }
     .timeline-event {
         min-height: 0;
         ul {
-                border: 1px solid red;
+                // border: 1px solid red;
                 width: 500px;
                 height: auto;
                 position: relative;
@@ -192,7 +195,7 @@ section {
             }
         li {
                 position: absolute;
-                background: purple;
+                // background: purple;
                 width: 100%;
                 h3 {
                     margin-top: 0;
@@ -320,33 +323,35 @@ section {
     left: 0;
     display: grid;
     ul {
-        border: 1px solid blue;
+        // border: 1px solid blue;
+        display: inline-block;
         position: fixed;
         justify-content: space-between;
-        top: 0%;
-        right: 10%; 
+        top: 15%;
+        right: -31.6%; 
+        transform: rotate(90deg);
+        transform-origin: bottom left;
         // transform: translate(-15%, -10%);
-        margin: 0;
+        margin-top: 0;
         padding: 0;
+
     }
     li {
+        // background: yellow;
+        float: left;
         opacity: 0;
-        padding-top: 2em;
-        padding-bottom: 2em;
-        height: 1.5em;
+        padding-right: 4em;
+        padding-left: 0;
         }
 
     &.active {
         position: fixed;
         z-index: 100;
-        ul {
-            border: 1px solid red;
-        }
         li {
-            transform: translateY(0);
-            transform: rotate(90deg);
-            transform-origin: top left;
-            opacity: 1;
+            opacity: .6;
+        }
+        a {
+            color: $color-accent2;
         }
     }
 }
@@ -368,27 +373,48 @@ section {
         width: 1.5em;
         height: 1.5em;
         content: "\2630";
-        color: rgb(226, 226, 105,);
+        color: $color-accent2;
         transform: rotate(90deg);
     }
 }
 
 .active .menu-button.navicon:before {
     content: "\2630";
-    color: rgb(226, 226, 105,);
+    color: $color-accent2;
     transform: rotateX(0deg);
 }
 
-.site-footer .site-nav {
+.site-footer {
+    padding-top: 0;
+    padding-bottom: 0;
+@media(min-width: $breakpoint-small) {
+    .site-nav {
+        text-align: left;
+        padding-left: 0;
+    }
+
     a {
         display: block;
         padding: .5em 0 .75em 0;
-    }  
-    h5 {
-        transform: rotate(90deg) translate(70%, 0%);
-        transform-origin: bottom right;
+    } 
+
+    ul {
+        min-width: 300px;
     }
+
+    h5 {
+        margin-top: 0;
+        padding-top:0;
+        top: 15%;
+        left: 50%; 
+        // transform: rotate(-90deg);
+        transform-origin: top left;     
+    }
+
+    
 }
+}
+
 
 .sub-footer {
     .nav {

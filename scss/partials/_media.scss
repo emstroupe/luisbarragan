@@ -46,3 +46,25 @@ img {
         clip-path: polygon(86% 0, 100% 7.5%, 100% 46%, 0 46%);
     }
 }
+
+// SUBPAGES MEDIA//
+.rust {
+    img {
+        clip-path: polygon(0 0%, 100% 0%, 0 50%);
+        transition: all .4s ease-out;
+    }
+    &:hover img {
+        clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+    }
+}
+
+.pink {
+    img {
+        clip-path: polygon(100 0%, 0% 100%, 100% 100%);
+        transition: all .4s ease-out;
+    }
+    &:hover img {
+        clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+    }
+}
+

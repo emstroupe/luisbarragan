@@ -15,72 +15,160 @@
     }
 
     h2 {
-        margin: 0;
+        margin: 0em;
+        padding-top: 2em;
+        padding-left: 0;
+        font-weight: 200;
+        font-size: 1.5em;
+        color: $color-midgrey;
     }
 
-    .site-header .site-nav {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        display: grid;
-        ul {
-            position: fixed;
-            top: 15%;
-            right: 10%; 
-            transform: translate(-15%, -10%);
-            margin: 0;
-            padding: 0;
+//     .site-header .site-nav {
+//         position: absolute;
+//         width: 100%;
+//         top: 0;
+//         left: 0;
+//         display: grid;
+//         ul {
+//             position: fixed;
+//             top: 15%;
+//             right: 10%; 
+//             transform: translate(-15%, -10%);
+//             margin: 0;
+//             padding: 0;
+//         }
+//         li {
+//             opacity: 0;
+//             text-align: right;
+//         }
+//         a {
+//             display: block;
+//             padding: .5em 0 .75em 0;
+//         }
+    
+//         &.active {
+//             position: fixed;
+//             // height: 100%;
+//             z-index: 100;
+//             ul {
+//                 top: 15%;
+//             }
+//             li {
+//                 transform: translateY(0);
+//                 opacity: 1;
+//             }
+//         }
+//     }
+
+//     .menu-button {
+//         position: fixed;
+//         top: 2.5em;
+//         right: 2.5em;
+//         width: 1.5em;
+//         height: 1.5em;
+//         overflow: hidden;
+//         z-index: 200;
+    
+//         &:before {
+//             display: inline-block;
+//             font-size: 1.2em;
+//             width: 1.5em;
+//             height: 1.5em;
+//             content: "\2630";
+//             color: $color-accent;
+//             transform: rotate(90deg);
+//         }
+//     }
+    
+//     .active .menu-button.navicon:before {
+//         content: "\2630";
+//         color: $color-accent;
+//         transform: rotateX(0deg);
+//     }
+//     .container {
+//     }
+// }
+
+
+.site-header .site-nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    ul {
+        // border: 1px solid blue;
+        display: inline-block;
+        position: fixed;
+        justify-content: space-between;
+        top: 15%;
+        right: -31.6%; 
+        transform: rotate(90deg);
+        transform-origin: bottom left;
+        // transform: translate(-15%, -10%);
+        margin-top: 0;
+        padding: 0;
+
+    }
+    li {
+        // background: yellow;
+        float: left;
+        opacity: 0;
+        padding-right: 4em;
+        padding-left: 0;
         }
+
+    &.active {
+        position: fixed;
+        z-index: 100;
         li {
-            opacity: 0;
-            text-align: right;
+            opacity: .6;
         }
         a {
-            display: block;
-            padding: .5em 0 .75em 0;
-        }
-    
-        &.active {
-            position: fixed;
-            // height: 100%;
-            z-index: 100;
-            ul {
-                top: 15%;
-            }
-            li {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            color: $color-accent2;
         }
     }
+}
 
-    .menu-button {
-        position: fixed;
-        top: 2.5em;
-        right: 2.5em;
+/* MENU BUTTON */
+.menu-button {
+    // position: absolute;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 1.5em;
+    height: 1.5em;
+    overflow: hidden;
+    z-index: 200;
+
+    &:before {
+        display: inline-block;
+        font-size: 1.2em;
         width: 1.5em;
         height: 1.5em;
-        overflow: hidden;
-        z-index: 200;
-    
-        &:before {
-            display: inline-block;
-            font-size: 1.2em;
-            width: 1.5em;
-            height: 1.5em;
-            content: "\2630";
-            color: $color-accent;
-            transform: rotate(90deg);
-        }
-    }
-    
-    .active .menu-button.navicon:before {
         content: "\2630";
-        color: $color-accent;
-        transform: rotateX(0deg);
+        color: $color-accent2;
+        transform: rotate(90deg);
     }
-    .container {
+}
+
+.active .menu-button.navicon:before {
+    content: "\2630";
+    color: $color-accent2;
+    transform: rotateX(0deg);
+    }
+}
+
+
+
+/* FOOTER */
+.sub-footer {
+    hr {
+        transform: rotate(0deg);
+    }
+
+    .site-nav {
+        text-align: center;
     }
 }
 
