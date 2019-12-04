@@ -6,7 +6,7 @@
     h1 {
     font-family: $serif-fontfamily;
     font-weight: 400;
-    font-size: 2em;
+    font-size: 2em; 
     color: $color-midgrey;
     text-transform: none;
     padding: 0;
@@ -168,8 +168,20 @@
     }
 
     .site-nav {
+        text-align: center;   
+    }
+
+    .nav {
         text-align: center;
     }
+    ul {
+        display: inline-block;
+    }
+    li {
+        display: inline-block;
+        padding: .5em 1.5em ;
+    } 
+
 }
 
 

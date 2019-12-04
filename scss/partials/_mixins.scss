@@ -2,6 +2,7 @@
 @mixin sans-fontrules {
     font-family: $sans-fontfamily;
     text-transform: uppercase;
+    letter-spacing: .03em;
 }
 
 @mixin li-rules {

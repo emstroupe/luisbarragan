@@ -23,7 +23,6 @@ section {
 
 /* STICKY SECTIONS ONLY */
 .sticky-section {
-// border: 1px solid orange;
     @media(min-width: $breakpoint-small) {
         padding: 0;
         display: block;
@@ -33,7 +32,7 @@ section {
             display: flex;
             align-items: center;
             padding: 0 0 0 0;
-            min-height: 100vh;
+            min-height: 65vh;
         }
 
         h2 {
@@ -71,9 +70,8 @@ section {
 }
 
 
-/* LAYOUT SECTION */
+/* LAYOUT SECTIONS */
 .split-crossed {
-    // background: rgba(0,0,255,.5);
     @media (min-width: $breakpoint-small) {
         .block {
             display: flex;
@@ -111,211 +109,127 @@ section {
         }
 }
 
-// .container-timeline {
-//     border: 4px solid magenta;
 
-//     .timelinedate {
-//         ul {
-//             display: inline-block;
-//         }
-//         li {
-//             display: inline-block;
-//             padding: .5em 1.5em ;
-//             background: yellow;
-//         }       
-//     }
+/* TIMELINE SECTIONS */
 
-//     .timeline-event {
-//         ul {
-//             border: 1px solid red;
-//             // display: flex;
-//             position: relative;
-//         }
-//         li {
-//             position: absolute;
-//             background: purple;
-//             top: 200px;
-//             left: 30%;
-//             opacity: 0;
-
-//             &:before {
-//                 opacity: 0;
-//             }
-//         }
-
-//     }
-// }
-
-.site-header {
-    h1 {
-        font-size: 10vw;
-        color: $color-accent2;
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        padding-top: 20%;
-        padding-bottom: 0;
-        }
+#life {
+    // overflow-x: hidden;
 }
 
+// ALL SCREEN SIZES (MOBILE FIRST)
+.timeline-date {
+    overflow-x: hidden;
+    // background: yellow;
+    position: absolute;
+    width: 100%;
+    min-height: 70%;
+    padding-top: 4%;
+    margin-top: -13em;
+    ul {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 -10%;
+        margin-top: 10em;
+        border-bottom: 1px solid $color-accent;
+        width: 120%;
+        text-align: center;
+        transform-origin: bottom center;
+        justify-content: center;
+    }
+    li {
+        justify-content: center;
+        a {
+            
+            &.active  {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.timeline-event {
+    min-width: 0;
+    padding-top: 0;
+    ul {
+       width: 500px;
+       height: auto;
+       position: relative;
+       padding: 0;
+    }
+    li {
+        position: absolute;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate(-2em, -2em);
+        &.active {
+            visibility: visible;
+            transform: translate(0, 0);
+            transition: all .4s ease-out;
+            opacity: 1;
+        }
+        h3 {
+            color: $color-darkgrey;
+            margin-top: 0;
+            margin-bottom: .25em;
+        }
+        h4 {
+            margin-top: 0;
+            margin-bottom: .25em;
+            font-size: 1.6em;
+            
+        }
+        p {
+            margin-top: 0;
+        } 
+    }
+}
+
+section.timeline-event {
+    min-height: 0;
+    margin-top: 15vh;
+    padding-bottom: 50vh;
+    h2 {
+        padding-top: 2em 0 0 0;
+    } 
+}
+
+// SMALL  SCREENS ONLY
 @media (max-width: $breakpoint-small) {
     .timeline-date {
         ul {
-            // background: rgba(0,0,255,.5);
-            display: flex;
-            justify-content: center;
-            // padding: 0;
-            padding-top: 0;
-            padding-left: 0;
-            padding-right: 0;
-            margin: 0;
-            margin-top: 7em;
-            border-bottom: 1px solid $color-accent;
-            width: 100%;
-            text-align: center;
+            padding-top: 0; 
             transform: rotate(10deg);
-            transform-origin: bottom center;
         } 
         li {
-            // display: inline-block;
-            justify-content: center;
             padding: 1em 1.7em;
             transform: rotate(-10deg);
         }  
     }
     .timeline-event {
-        min-height: 0;
         ul {
-                // border: 1px solid red;
-                width: 500px;
-                height: auto;
-                position: relative;
-                padding: 0;
-                margin: 0;
+            margin: 0;
             }
-        li {
-                position: absolute;
-                // background: purple;
-                width: 100%;
-                h3 {
-                    margin-top: 0;
-                    margin-bottom: .5em;
-                }
-                h4 {
-                    margin-top: 0;
-                    margin-bottom: .5em;
-                    font-size: 1.6em;
-                }
-                p {
-                    margin-top: 0;
-                }
-    
-            }
-        }
+    }    
 }
+
+// BIG SCREENS ONLY
 @media(min-width: $breakpoint-small) {
 .timeline-date {
         ul {
-            // background: rgba(0,0,255,.5);
-            display: flex;
-            justify-content: center;
-            // padding: 0;
-            padding-top: 0;
-            padding-left: 0;
-            padding-right: 0;
-            margin: 0;
-            margin-top: 7em;
-            transform: rotate(15deg);
-            transform-origin: bottom center;
-            border-bottom: 1px solid $color-accent;
-            width: 100%;
-            text-align: center;
+            padding-top: 3em;
+            transform: rotate(15deg);   
         }
         li {
-            // display: inline-block;
-            justify-content: center;
             padding: 1em 2em;
             transform: rotate(-15deg);
-            // background: yellow;
         }       
-    }
-.timeline-event {
-    min-width: 0;
-    ul {
-            // border: 1px solid red;
-            width: 500px;
-            height: auto;
-            position: relative;
-            padding: 0;
-        }
-    li {
-            position: absolute;
-            // background: purple;
-            width: 100%;
-            h3 {
-                margin-top: 0;
-                margin-bottom: .5em;
-            }
-            h4 {
-                margin-top: 0;
-                margin-bottom: .5em;
-                font-size: 1.6em;
-            }
-            p {
-                margin-top: 0;
-            }
-
-        }
     }
 }
 
-// .timeline-event li {
-//   display: block;
-// }
-
-/* SITE NAVIGATION */ 
-// .site-header .site-nav {
-//     position: absolute;
-//     width: 100%;
-//     top: 0;
-//     left: 0;
-//     display: grid;
-//     ul {
-//         position: fixed;
-//         display: flex;
-//         justify-content: space-between;
-//         top: 10%;
-//         right: -3.6%;
-//         width: 10em;
-//         position: fixed;
-//         transform: rotate(90deg);
-//         transform-origin: bottom left;
-//         margin: 0;
-//         padding: 0;
-//     }
-//     li {
-//         opacity: 0;
-//     }
-//     // a {
-//     //     display: block;
-//     //     // padding: .5em 0 .9em 0;
-//     // }
-
-//     &.active {
-//         position: fixed;
-//         // height: 100%;
-//         z-index: 100;
-//         ul {
-//         }
-//         li {
-//             // transform: translateY(0);
-//             // transform: rotate(90deg);
-//             // transform-origin: top left;
-//             opacity: 1;
-//         }
-//     }
-// }
-
+/* SITE HEADER */
 .site-header .site-nav {
     position: absolute;
     width: 100%;
@@ -384,6 +298,7 @@ section {
     transform: rotateX(0deg);
 }
 
+/* SITE FOOTER */
 .site-footer {
     padding-top: 0;
     padding-bottom: 0;
@@ -409,23 +324,8 @@ section {
         left: 50%; 
         // transform: rotate(-90deg);
         transform-origin: top left;     
-    }
-
-    
+    }    
 }
 }
 
-
-.sub-footer {
-    .nav {
-        text-align: center;
-    }
-    ul {
-        display: inline-block;
-    }
-    li {
-        display: inline-block;
-        padding: .5em 1.5em ;
-    }   
-}
 
