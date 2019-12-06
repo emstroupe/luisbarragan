@@ -99,12 +99,14 @@ section {
 
 .site-header {
     h1 {
-        font-size: 10vw;
-        color: $color-accent2;
+        font-size: 9.25vw;
+        font-weight: 300;
+        color: $color-offwhite;
+        // color: $color-accent2;
         position: absolute;
         width: 100%;
         text-align: center;
-        padding-top: 20%;
+        padding-top: 21.75%;
         padding-bottom: 0;
         }
 }
@@ -237,34 +239,37 @@ section.timeline-event {
     left: 0;
     display: grid;
     ul {
-        // border: 1px solid blue;
+        border: 1px solid blue;
         display: inline-block;
-        position: fixed;
+        position: absolute;
         justify-content: space-between;
-        top: 15%;
-        right: -31.6%; 
+        top: 8vw;
+        right: 1vw; 
         transform: rotate(90deg);
         transform-origin: bottom left;
         // transform: translate(-15%, -10%);
         margin-top: 0;
         padding: 0;
+        list-style: none;
 
     }
     li {
-        // background: yellow;
         float: left;
         opacity: 0;
-        padding-right: 4em;
+        padding-top: 0;
+        padding-bottom: 0;
         padding-left: 0;
+        padding-right: 2em;
         }
 
     &.active {
-        position: fixed;
+        position: absolute;
         z-index: 100;
         li {
-            opacity: .6;
+            opacity: .9;
         }
         a {
+            display: block;
             color: $color-accent2;
         }
     }
@@ -272,20 +277,24 @@ section.timeline-event {
 
 /* MENU BUTTON */
 .menu-button {
-    // position: absolute;
-    position: fixed;
-    top: 10%;
-    right: 10%;
+    position: absolute;
+    // position: fixed;
+    // top: 10%;
+    // right: 10%;
+    top: 6.25vw;
+    right: 11vw;
     width: 1.5em;
     height: 1.5em;
     overflow: hidden;
     z-index: 200;
+    cursor: pointer;
 
     &:before {
         display: inline-block;
         font-size: 1.2em;
         width: 1.5em;
         height: 1.5em;
+        // content: url(/img/ [insert png]);
         content: "\2630";
         color: $color-accent2;
         transform: rotate(90deg);
@@ -293,6 +302,7 @@ section.timeline-event {
 }
 
 .active .menu-button.navicon:before {
+    // content: url(/img/ [insert png]);
     content: "\2630";
     color: $color-accent2;
     transform: rotateX(0deg);
