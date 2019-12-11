@@ -241,12 +241,11 @@ section.timeline-event {
         display: inline-block;
         position: absolute;
         justify-content: space-between;
-        // top: 8vw;
-        // right: 1vw;
-        top: 8vh;
-        right: 1vw; 
-        transform: rotate(90deg);
-        transform-origin: bottom left;
+       
+    top: 6.25vw;
+    right: 11vw;
+        transform: rotate(90deg) translateX(110%);
+        transform-origin: top right;
         // transform: translate(-15%, -10%);
         margin-top: 0;
         padding: 0;
@@ -283,6 +282,8 @@ section.timeline-event {
     // right: 10%;
     top: 6.25vw;
     right: 11vw;
+    // top: 0;
+    // right: 0;
     width: 1.5em;
     height: 1.5em;
     overflow: hidden;
