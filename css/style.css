@@ -345,6 +345,9 @@ section {
   padding-bottom: 0; }
 
 /* TIMELINE SECTIONS */
+#life {
+  overflow-x: hidden; }
+
 .timeline-date {
   overflow-x: hidden;
   position: absolute;
