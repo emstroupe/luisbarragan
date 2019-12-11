@@ -7,6 +7,9 @@ img {
     .container {
         position: relative;
         padding: 0;
+        background: red;
+        // max-width: $breakpoint-large;
+        // max-height: $breakpoint-large:
     }
     img {
         opacity: 0;

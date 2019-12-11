@@ -243,7 +243,9 @@ section.timeline-event {
         display: inline-block;
         position: absolute;
         justify-content: space-between;
-        top: 8vw;
+        // top: 8vw;
+        // right: 1vw;
+        top: 8vh;
         right: 1vw; 
         transform: rotate(90deg);
         transform-origin: bottom left;
@@ -324,16 +326,21 @@ section.timeline-event {
     } 
 
     ul {
-        min-width: 300px;
+        // background: yellow;
+        min-width: 200px;
+        
+
     }
 
     h5 {
-        margin-top: 0;
+        background: red;
+        margin-top: -25;
         padding-top:0;
         top: 15%;
         left: 50%; 
-        // transform: rotate(-90deg);
-        transform-origin: top left;     
+        transform: rotate(-90deg);
+        transform-origin: top left; 
+            
     }    
 }
 }

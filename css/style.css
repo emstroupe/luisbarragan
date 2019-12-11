@@ -119,7 +119,8 @@ img {
 
 .clip-path .container {
   position: relative;
-  padding: 0; }
+  padding: 0;
+  background: red; }
 
 .clip-path img {
   opacity: 0; }
@@ -460,7 +461,7 @@ section.timeline-event {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    top: 8vw;
+    top: 8vh;
     right: 1vw;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -526,12 +527,16 @@ section.timeline-event {
       display: block;
       padding: .5em 0 .75em 0; }
     .site-footer ul {
-      min-width: 300px; }
+      min-width: 200px; }
     .site-footer h5 {
-      margin-top: 0;
+      background: red;
+      margin-top: -25;
       padding-top: 0;
       top: 15%;
       left: 50%;
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
       -webkit-transform-origin: top left;
       -ms-transform-origin: top left;
       transform-origin: top left; } }
