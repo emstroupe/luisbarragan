@@ -24,15 +24,15 @@ section {
 /* STICKY SECTIONS ONLY */
 .sticky-section {
     @media(min-width: $breakpoint-small) {
-        padding: 0;
+        // padding: 0;
         display: block;
-        min-height: 100vh;
+        // min-height: 150vh;
 
         .container {
             display: flex;
             align-items: center;
             padding: 0 0 0 0;
-            min-height: 75vh;
+            // min-height: 75vh;
         }
 
         h2 {
@@ -74,22 +74,30 @@ section {
 .split-crossed {
     @media (min-width: $breakpoint-small) {
         .block {
+            // border: 1px solid red;
             display: flex;
             align-items: center;
+            margin-top: 5em;
+            padding-left: 6vw;
+            padding-right: 0
         }
 
         .image-block {
             width: 45%;
+            z-index: -1;
         }
 
         .text-block {
+            // border: 1px solid blue;
             width: 55%;
-            h2 {
-                transform: translateX(2.5em);
-            }
+            z-index: 1;
             h3 {
-                font-size: 3.2vw;
+                transform: translateX(.5em);
+                font-size: 3.5vw;
                 line-height: .5em;
+            }
+            p {
+                transform: translateX(2.5em);
             }
         }
     }
@@ -109,7 +117,6 @@ section {
         }
 }
 
-
 /* TIMELINE SECTIONS */
 
 #life {
@@ -119,7 +126,6 @@ section {
 // ALL SCREEN SIZES (MOBILE FIRST)
 .timeline-date {
     overflow-x: hidden;
-    // background: yellow;
     position: absolute;
     width: 100%;
     min-height: 70%;
@@ -151,12 +157,11 @@ section {
 
 .timeline-event {
     min-width: 0;
-    padding-top: 0;
+    padding: 3em 0;
     ul {
        width: 500px;
        height: auto;
        position: relative;
-       padding: 0;
     }
     li {
         position: absolute;
@@ -194,7 +199,7 @@ section.timeline-event {
     min-height: 0;
     margin-top: 15vh;
     padding-bottom: 50vh;
-    padding: 3em;
+    padding: 3em 0;
 }
 
 // SMALL  SCREENS ONLY
@@ -243,9 +248,8 @@ section.timeline-event {
         display: inline-block;
         position: absolute;
         justify-content: space-between;
-       
-    top: 6.25vw;
-    right: 11vw;
+        top: 6.25vw;
+        right: 11vw;
         transform: rotate(90deg) translateX(115%);
         transform-origin: top right;
         // transform: translate(-15%, -10%);
@@ -268,6 +272,15 @@ section.timeline-event {
         z-index: 100;
         li {
             opacity: .9;
+            transition: all .4s cubic-bezier(0,1,1,1);
+            transform: translateY(0);
+            opacity: 1;
+            &:nth-child(1) { transition-delay: .4s; }
+            &:nth-child(2) { transition-delay: .6s; }
+            &:nth-child(3) { transition-delay: .8s; }
+            &:nth-child(4) { transition-delay: 1s; }
+            &:nth-child(5) { transition-delay: 1.2s; }
+            &:nth-child(6) { transition-delay: 1.4s; }
         }
         a {
             display: block;
@@ -309,6 +322,7 @@ section.timeline-event {
     content: "\2630";
     color: $color-accent2;
     transform: rotateX(0deg);
+    transition: .4s all ease-out;
 }
 
 /* SITE FOOTER */
@@ -348,5 +362,40 @@ section.timeline-event {
     }    
 }
 }
+
+
+/* SCROLL TRIGGERED ANIMATION VIA SCROLLOUT */
+[data-scroll] {
+    transition: opacity 1s;
+  }
+  [data-scroll="in"] {
+    opacity: 1;
+  }
+  [data-scroll="out"] {
+    opacity: 0;
+  }
+  
+  /* SPLIT CROSSED ANIMATION */
+  [data-scroll].split-crossed .image-block,
+  [data-scroll].split-crossed .text-block {
+      transition: 1s ease-out transform;
+  }
+  
+  [data-scroll="in"].split-crossed .image-block {
+      transform: translateX(0);
+  }
+  
+  [data-scroll="in"].split-crossed .text-block {
+      transform: translateX(-2em);
+  }
+  
+  [data-scroll="out"].split-crossed .image-block {
+      transform: translateX(2em);
+  }
+  
+  [data-scroll="out"].split-crossed .text-block {
+      transform: translateX(-4em);
+  }
+  
 
 

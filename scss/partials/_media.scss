@@ -18,32 +18,63 @@ img {
     }
     .rust {
         background-image: url(../img/rust.jpg);
-        background-size: 120%;
-        background-position: right top;
+        background-size: 100%;
+        background-position: right top; 
         clip-path: polygon(0 0%, 100% 0%, 0 50%);
+        transition: 2s;
+        z-index: 0;
     }
+    .rust:hover {
+        clip-path: polygon(0 0%, 100% 80%, 0 80%);
+        z-index: 999;
+    }
+
     .yellow {
         background-image: url(../img/yellow.jpg);
-        background-size: 120%;
+        background-size: 105%;
         position: absolute;
         top: 1vw;
-        clip-path: polygon(30% 26.75%, 100% 0, 100% 60%);
+        clip-path: polygon(30% 26.75%, 100% 0, 100% 60%);   
+        // transition: background-size 2s;
+        transition: clip-path 2s;
     }
+    .yellow:hover {
+        // background-size: 120%;
+        clip-path: polygon(0% 38%, 100% 0, 100% 90%);
+        z-index: 999;
+        
+    }
+
     .blue {
         background-image: url(../img/blue.jpg);
-        background-size: 110%;
+        background-size: 100%;
         position: absolute;
         // top: 27.45vw;
         top: 28vw;
         clip-path: polygon(29% .5%, 85% 40.5%, 0 100%, 0 17%);
+        z-index: 1;
+        transition: background-size 2s;
     }
+    .blue:hover {
+        background-size: 120%;
+    }
+
     .bluewater {
         background-image: url(../img/bluewater.jpg);
         background-size: 100%;
         position: absolute;
         // top: 54.2vw;  
-        top: 55.5vw;       
-        clip-path: polygon(86% 0, 100% 7.5%, 100% 46%, 0 46%);
+        top: 55.5vw;     
+        clip-path: polygon(86% 0, 100% 7.5%, 100% 46%, 0 46%);   
+        z-index: 0;
+        transition: 2s;
+    }
+
+    .bluewater:hover {
+        background-image: url(../img/bluewater2.jpg);
+        clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 80%);
+        z-index: 999;
+
     }
 }
 
