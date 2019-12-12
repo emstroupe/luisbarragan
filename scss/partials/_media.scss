@@ -7,9 +7,8 @@ img {
     .container {
         position: relative;
         padding: 0;
-        background: red;
         // max-width: $breakpoint-large;
-        // max-height: $breakpoint-large:
+        // max-height: $breakpoint-large;
     }
     img {
         opacity: 0;
@@ -32,42 +31,40 @@ img {
     }
     .blue {
         background-image: url(../img/blue.jpg);
-        background-size: 120%;
+        background-size: 110%;
         position: absolute;
-         // top: 52%; // 
-        // top: -52%; // added container
-        top: 27.45vw;
+        // top: 27.45vw;
+        top: 28vw;
         clip-path: polygon(29% .5%, 85% 40.5%, 0 100%, 0 17%);
     }
     .bluewater {
         background-image: url(../img/bluewater.jpg);
         background-size: 100%;
         position: absolute;
-        // top: 81%;
-        // top: -19%; // added container
-        top: 54.2vw;         
+        // top: 54.2vw;  
+        top: 55.5vw;       
         clip-path: polygon(86% 0, 100% 7.5%, 100% 46%, 0 46%);
     }
 }
 
 // SUBPAGES MEDIA//
-.rust {
-    img {
-        clip-path: polygon(0 0%, 100% 0%, 0 50%);
-        transition: all .4s ease-out;
-    }
-    &:hover img {
-        clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
-    }
-}
+// .rust {
+//     img {
+//         clip-path: polygon(0 0%, 100% 0%, 0 50%);
+//         transition: all .4s ease-out;
+//     }
+//     &:hover img {
+//         clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+//     }
+// }
 
-.pink {
-    img {
-        clip-path: polygon(100 0%, 0% 100%, 100% 100%);
-        transition: all .4s ease-out;
-    }
-    &:hover img {
-        clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
-    }
-}
+// .pink {
+//     img {
+//         clip-path: polygon(100 0%, 0% 100%, 100% 100%);
+//         transition: all .4s ease-out;
+//     }
+//     &:hover img {
+//         clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+//     }
+// }
 

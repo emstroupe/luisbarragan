@@ -69,7 +69,8 @@ h4 {
 
 h5 {
   font-family: "kings-caslon", sans-serif;
-  color: rgba(0, 0, 0, 0.5); }
+  color: rgba(185, 184, 184, 0.5);
+  font-size: .98em; }
 
 h6 {
   font-family: "proxima-nova-extra-condensed", sans-serif;
@@ -79,7 +80,8 @@ p {
   font-family: "kings-caslon", sans-serif;
   font-weight: 400;
   font-size: .9em;
-  max-width: 29em; }
+  max-width: 27em;
+  color: rgba(0, 0, 0, 0.65); }
 
 .site-nav li {
   font-family: "proxima-nova-extra-condensed", sans-serif;
@@ -103,7 +105,7 @@ a {
 
 hr {
   display: block;
-  width: 80%;
+  width: 60%;
   height: 1px;
   border: 0;
   border-top: 1px solid #fe84b2;
@@ -119,8 +121,7 @@ img {
 
 .clip-path .container {
   position: relative;
-  padding: 0;
-  background: red; }
+  padding: 0; }
 
 .clip-path img {
   opacity: 0; }
@@ -145,9 +146,9 @@ img {
 
 .clip-path .blue {
   background-image: url(../img/blue.jpg);
-  background-size: 120%;
+  background-size: 110%;
   position: absolute;
-  top: 27.45vw;
+  top: 28vw;
   -webkit-clip-path: polygon(29% 0.5%, 85% 40.5%, 0 100%, 0 17%);
   clip-path: polygon(29% 0.5%, 85% 40.5%, 0 100%, 0 17%); }
 
@@ -155,31 +156,9 @@ img {
   background-image: url(../img/bluewater.jpg);
   background-size: 100%;
   position: absolute;
-  top: 54.2vw;
+  top: 55.5vw;
   -webkit-clip-path: polygon(86% 0, 100% 7.5%, 100% 46%, 0 46%);
   clip-path: polygon(86% 0, 100% 7.5%, 100% 46%, 0 46%); }
-
-.rust img {
-  -webkit-clip-path: polygon(0 0%, 100% 0%, 0 50%);
-  clip-path: polygon(0 0%, 100% 0%, 0 50%);
-  -webkit-transition: all .4s ease-out;
-  -o-transition: all .4s ease-out;
-  transition: all .4s ease-out; }
-
-.rust:hover img {
-  -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
-  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%); }
-
-.pink img {
-  -webkit-clip-path: polygon(100 0%, 0% 100%, 100% 100%);
-  clip-path: polygon(100 0%, 0% 100%, 100% 100%);
-  -webkit-transition: all .4s ease-out;
-  -o-transition: all .4s ease-out;
-  transition: all .4s ease-out; }
-
-.pink:hover img {
-  -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
-  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%); }
 
 * {
   -webkit-box-sizing: border-box;
@@ -274,7 +253,7 @@ section {
   .sticky-section {
     padding: 0;
     display: block;
-    min-height: 0; }
+    min-height: 100vh; }
     .sticky-section .container {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -283,7 +262,7 @@ section {
       -ms-flex-align: center;
       align-items: center;
       padding: 0 0 0 0;
-      min-height: 65vh; }
+      min-height: 75vh; }
     .sticky-section h2 {
       text-align: right;
       position: -webkit-sticky;
@@ -335,19 +314,16 @@ section {
       line-height: .5em; } }
 
 .site-header h1 {
-  font-size: 9.25vw;
-  font-weight: 300;
-  color: #f2f2f2;
+  font-size: 10vw;
+  font-weight: 200;
+  color: #e3bd42;
   position: absolute;
   width: 100%;
   text-align: center;
-  padding-top: 21.75%;
+  padding-top: 21%;
   padding-bottom: 0; }
 
 /* TIMELINE SECTIONS */
-#life {
-  overflow-x: hidden; }
-
 .timeline-date {
   overflow-x: hidden;
   position: absolute;
@@ -378,7 +354,7 @@ section {
     -ms-flex-pack: center;
     justify-content: center; }
     .timeline-date li a.active {
-      font-weight: bold; }
+      opacity: 0; }
 
 .timeline-event {
   min-width: 0;
@@ -412,28 +388,30 @@ section {
     .timeline-event li h4 {
       margin-top: 0;
       margin-bottom: .25em;
-      font-size: 1.6em; }
+      font-size: 1.6em;
+      max-width: 15em; }
     .timeline-event li p {
       margin-top: 0; }
 
 section.timeline-event {
   min-height: 0;
   margin-top: 15vh;
-  padding-bottom: 50vh; }
-  section.timeline-event h2 {
-    padding-top: 2em 0 0 0; }
+  padding-bottom: 50vh;
+  padding: 3em; }
 
 @media (max-width: 768px) {
-  .timeline-date ul {
-    padding-top: 0;
-    -webkit-transform: rotate(10deg);
-    -ms-transform: rotate(10deg);
-    transform: rotate(10deg); }
-  .timeline-date li {
-    padding: 1em 1.7em;
-    -webkit-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    transform: rotate(-10deg); }
+  .timeline-date {
+    margin-top: 0em; }
+    .timeline-date ul {
+      padding-top: 0;
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg); }
+    .timeline-date li {
+      padding: 1em 1.7em;
+      -webkit-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+      transform: rotate(-10deg); }
   .timeline-event ul {
     margin: 0; } }
 
@@ -458,7 +436,6 @@ section.timeline-event {
   display: -ms-grid;
   display: grid; }
   .site-header .site-nav ul {
-    border: 1px solid blue;
     display: inline-block;
     position: absolute;
     -webkit-box-pack: justify;
@@ -466,9 +443,9 @@ section.timeline-event {
     justify-content: space-between;
     top: 6.25vw;
     right: 11vw;
-    -webkit-transform: rotate(90deg) translateX(110%);
-    -ms-transform: rotate(90deg) translateX(110%);
-    transform: rotate(90deg) translateX(110%);
+    -webkit-transform: rotate(90deg) translateX(115%);
+    -ms-transform: rotate(90deg) translateX(115%);
+    transform: rotate(90deg) translateX(115%);
     -webkit-transform-origin: top right;
     -ms-transform-origin: top right;
     transform-origin: top right;
@@ -481,7 +458,7 @@ section.timeline-event {
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 0;
-    padding-right: 2em; }
+    padding-right: 2.5em; }
   .site-header .site-nav.active {
     position: absolute;
     z-index: 100; }
@@ -520,8 +497,10 @@ section.timeline-event {
 
 /* SITE FOOTER */
 .site-footer {
-  padding-top: 0;
-  padding-bottom: 0; }
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+  padding-bottom: 0;
+  min-height: 70vh; }
   @media (min-width: 768px) {
     .site-footer .site-nav {
       text-align: left;
@@ -532,14 +511,14 @@ section.timeline-event {
     .site-footer ul {
       min-width: 200px; }
     .site-footer h5 {
-      background: red;
-      margin-top: -25;
-      padding-top: 0;
-      top: 15%;
-      left: 50%;
-      -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-      transform: rotate(-90deg);
+      margin-top: -35;
+      padding-top: .8em;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      -webkit-transform: rotate(90deg) translate(50%);
+      -ms-transform: rotate(90deg) translate(50%);
+      transform: rotate(90deg) translate(50%);
       -webkit-transform-origin: top left;
       -ms-transform-origin: top left;
       transform-origin: top left; } }

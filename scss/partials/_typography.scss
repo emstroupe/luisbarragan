@@ -38,7 +38,8 @@ h4 {
 
 h5 {
     font-family: $serif-fontfamily;
-    color: $color-midgrey;
+    color: $color-grey;
+    font-size: .98em;
     // transform: rotate(-90deg) translate(100%, 50%);
 }
 
@@ -51,7 +52,8 @@ p {
     font-family: $serif-fontfamily;
     font-weight: 400;
     font-size: .9em;
-    max-width: 29em;
+    max-width: 27em;
+    color: $color-darkgrey; 
 }
 
 .site-nav li {
@@ -78,7 +80,7 @@ a {
 
 hr {
     display: block;
-    width: 80%;
+    width: 60%;
     height: 1px;
     border: 0;
     border-top: 1px solid $color-accent;
