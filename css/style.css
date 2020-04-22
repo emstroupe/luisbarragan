@@ -123,8 +123,7 @@ img {
   position: relative;
   padding: 0;
   margin: 0 auto;
-  max-width: 1250px;
-  border: 1px solid red; }
+  max-width: 1250px; }
 
 .clip-path img {
   opacity: 0;
@@ -153,7 +152,7 @@ img {
   background-image: url(../img/blue.jpg);
   background-size: 100%;
   position: absolute;
-  top: 30vw;
+  top: 35vw;
   -webkit-clip-path: polygon(26% 0%, 100% 40.5%, 0 70%, 0 18%);
   clip-path: polygon(26% 0%, 100% 40.5%, 0 70%, 0 18%); }
 
@@ -161,9 +160,15 @@ img {
   background-image: url(../img/bluewater2.jpg);
   background-size: 100%;
   position: absolute;
-  top: 53.75vw;
+  top: 63vw;
   -webkit-clip-path: polygon(0% 22.5%, 100% 0, 100% 60%);
   clip-path: polygon(0% 22.5%, 100% 0, 100% 60%); }
+
+@media (max-width: 1050px) {
+  .blue {
+    top: 32.23vw; }
+  .bluewater {
+    top: 58vw; } }
 
 * {
   -webkit-box-sizing: border-box;
@@ -175,8 +180,7 @@ body {
 .container {
   padding: 0 4%;
   margin: 0 auto;
-  max-width: 1000px;
-  border: 1px solid blue; }
+  max-width: 1000px; }
 
 @media (min-width: 768px) {
   body {
@@ -295,7 +299,6 @@ section {
       -ms-transform-origin: bottom right;
       transform-origin: bottom right; }
     .sticky-section .block {
-      border: 1px solid red;
       padding: 0 6.5em;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -352,7 +355,6 @@ section {
       font-weight: bold; }
 
 .timeline-event .container {
-  border: 1px solid purple;
   padding-top: 10em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -369,7 +371,6 @@ section {
   padding: 0; }
 
 .timeline-event li {
-  border: 1px solid orange;
   position: absolute;
   -webkit-box-pack: center;
   -ms-flex-pack: center;

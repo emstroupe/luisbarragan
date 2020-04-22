@@ -9,7 +9,7 @@ img {
         padding: 0;
         margin: 0 auto;
         max-width: 1250px;
-        border: 1px solid red;
+        // border: 1px solid red;
     }
 
     img {
@@ -40,18 +40,31 @@ img {
         background-image: url(../img/blue.jpg);
         background-size: 100%;
         position: absolute;
-        top: 30vw;
+        // top: 30vw;
+        top: 35vw;
         clip-path: polygon(26% 0%, 100% 40.5%, 0 70%, 0 18%);
     }
- 
+
     .bluewater {
         background-image: url(../img/bluewater2.jpg);
         background-size: 100%;
         position: absolute;
         // top: 54.2vw;  
-        top: 53.75vw;     
+        // top: 53.75vw;  
+        top: 63vw;   
         clip-path: polygon(0% 22.5%, 100% 0, 100% 60%);   
     }
+}
+
+    @media (max-width: $breakpoint-medium) { 
+        .blue {
+            top: 32.23vw;
+        }
+        .bluewater {
+            top: 58vw;
+        }
+    }
+
 
     // .rust {
     //     background-image: url(../img/rust.jpg);
@@ -86,7 +99,7 @@ img {
     //     clip-path: polygon(86% 0, 100% 7.5%, 100% 80%, 0 46%);   
     // }
     
-}
+
 
 // SUBPAGES MEDIA//
 // .rust {
